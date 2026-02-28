@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-black text-white m-0 p-0 overflow-hidden font-sans uppercase tracking-widest;
+  }
+}
+
+/* Glass & Neon HUD Elements */
+.glass-panel {
+  @apply bg-black/40 backdrop-blur-xl relative overflow-hidden;
+  border: 1px solid rgba(0, 240, 255, 0.2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8), inset 0 0 15px rgba(0, 240, 255, 0.05);
+}
+
+.glass-panel::before {
+  content: '';
+  @apply absolute top-0 left-0 w-full h-[1px];
+  background: linear-gradient(90deg, transparent, rgba(0, 240, 255, 0.8), transparent);
+}
+
+.glass-panel::after {
+  content: '';
+  @apply absolute bottom-0 right-0 w-4 h-4;
+  border-bottom: 2px solid rgba(0, 240, 255, 0.5);
+  border-right: 2px solid rgba(0, 240, 255, 0.5);
+}
+
+.hud-text {
+  text-shadow: 0 0 8px currentColor;
+}
+
+/* Scanlines overlay */
+.scanlines {
+  background: linear-gradient(to bottom,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0) 50%,
+      rgba(0, 0, 0, 0.15) 50%,
+      rgba(0, 0, 0, 0.15));
+  background-size: 100% 4px;
+  pointer-events: none;
+  z-index: 50;
+  mix-blend-mode: overlay;
+}
+
+/* Vignette */
+.vignette {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at center, transparent 30%, rgba(0, 0, 0, 0.8) 100%);
+  z-index: 40;
+}
+
+/* Colors */
+.text-risk-critical {
+  color: #ff0000;
+  text-shadow: 0 0 10px #ff0000;
+}
+
+.text-risk-high {
+  color: #ff003c;
+  text-shadow: 0 0 10px #ff003c;
+}
+
+.text-risk-medium {
+  color: #facc15;
+  text-shadow: 0 0 10px #facc15;
+}
+
+.text-risk-low {
+  color: #00f0ff;
+  text-shadow: 0 0 10px #00f0ff;
+}
+
+.bg-risk-critical {
+  background-color: #ff0000;
+  box-shadow: 0 0 15px #ff0000;
+}
+
+.bg-risk-high {
+  background-color: #ff003c;
+  box-shadow: 0 0 15px #ff003c;
+}
+
+.bg-risk-medium {
+  background-color: #facc15;
+  box-shadow: 0 0 15px #facc15;
+}
+
+.bg-risk-low {
+  background-color: #00f0ff;
+  box-shadow: 0 0 15px #00f0ff;
+}
+
+/* Blinking animations */
+.pulse-critical {
+  animation: pulse-hud 1s infinite alternate;
+}
+
+@keyframes pulse-hud {
+  0% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 2px #ff0000);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 15px #ff0000);
+    opacity: 1;
+  }
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(0, 240, 255, 0.5);
+  border-radius: 4px;
+}
+
+/* Crosshair Animation */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin-slow {
+  animation: spin-slow 10s linear infinite;
+}
