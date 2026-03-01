@@ -124,7 +124,7 @@ setInterval(async () => {
         console.log(`[Event Generated] ${newEvent.severity.toUpperCase()} - ${newEvent.title}`);
     }
 
-}, 5000); // New event every 5 seconds for visual impact
+}, 300000); // Changed to 5 minutes (300,000ms) to drastically save API credits
 
 const PORT = process.env.PORT || 4000;
 server.listen(PORT, () => {
