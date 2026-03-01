@@ -13,10 +13,10 @@ export default {
           700: '#1a1a1a',
         },
         risk: {
-          low: '#10b981',
-          medium: '#fbbf24',
-          high: '#ef4444',
-          critical: '#991b1b',
+          low: '#22c55e',      // Green
+          medium: '#f59e0b',   // Orange
+          high: '#ef4444',     // Red
+          critical: '#ff0000', // Pure Red
         }
       },
       fontFamily: {

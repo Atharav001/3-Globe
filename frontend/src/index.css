@@ -8,26 +8,19 @@
 
 /* Glass & Neon HUD Elements */
 .glass-panel {
-  @apply bg-black/40 backdrop-blur-xl relative overflow-hidden;
-  border: 1px solid rgba(0, 240, 255, 0.2);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8), inset 0 0 15px rgba(0, 240, 255, 0.05);
+  @apply bg-black/60 backdrop-blur-md relative overflow-hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
 }
 
 .glass-panel::before {
   content: '';
   @apply absolute top-0 left-0 w-full h-[1px];
-  background: linear-gradient(90deg, transparent, rgba(0, 240, 255, 0.8), transparent);
-}
-
-.glass-panel::after {
-  content: '';
-  @apply absolute bottom-0 right-0 w-4 h-4;
-  border-bottom: 2px solid rgba(0, 240, 255, 0.5);
-  border-right: 2px solid rgba(0, 240, 255, 0.5);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
 }
 
 .hud-text {
-  text-shadow: 0 0 8px currentColor;
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
 }
 
 /* Scanlines overlay */
@@ -35,12 +28,13 @@
   background: linear-gradient(to bottom,
       rgba(255, 255, 255, 0),
       rgba(255, 255, 255, 0) 50%,
-      rgba(0, 0, 0, 0.15) 50%,
-      rgba(0, 0, 0, 0.15));
+      rgba(0, 0, 0, 0.2) 50%,
+      rgba(0, 0, 0, 0.2));
   background-size: 100% 4px;
   pointer-events: none;
   z-index: 50;
-  mix-blend-mode: overlay;
+  mix-blend-mode: multiply;
+  opacity: 0.5;
 }
 
 /* Vignette */
@@ -48,49 +42,49 @@
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: radial-gradient(circle at center, transparent 30%, rgba(0, 0, 0, 0.8) 100%);
+  background: radial-gradient(circle at center, transparent 40%, rgba(0, 0, 0, 0.9) 100%);
   z-index: 40;
 }
 
 /* Colors */
 .text-risk-critical {
   color: #ff0000;
-  text-shadow: 0 0 10px #ff0000;
+  text-shadow: 0 0 8px rgba(255, 0, 0, 0.5);
 }
 
 .text-risk-high {
-  color: #ff003c;
-  text-shadow: 0 0 10px #ff003c;
+  color: #ef4444;
+  text-shadow: 0 0 8px rgba(239, 68, 68, 0.5);
 }
 
 .text-risk-medium {
-  color: #facc15;
-  text-shadow: 0 0 10px #facc15;
+  color: #f59e0b;
+  text-shadow: 0 0 8px rgba(245, 158, 11, 0.5);
 }
 
 .text-risk-low {
-  color: #00f0ff;
-  text-shadow: 0 0 10px #00f0ff;
+  color: #22c55e;
+  text-shadow: 0 0 8px rgba(34, 197, 94, 0.5);
 }
 
 .bg-risk-critical {
   background-color: #ff0000;
-  box-shadow: 0 0 15px #ff0000;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
 }
 
 .bg-risk-high {
-  background-color: #ff003c;
-  box-shadow: 0 0 15px #ff003c;
+  background-color: #ef4444;
+  box-shadow: 0 0 10px rgba(239, 68, 68, 0.4);
 }
 
 .bg-risk-medium {
-  background-color: #facc15;
-  box-shadow: 0 0 15px #facc15;
+  background-color: #f59e0b;
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.4);
 }
 
 .bg-risk-low {
-  background-color: #00f0ff;
-  box-shadow: 0 0 15px #00f0ff;
+  background-color: #22c55e;
+  box-shadow: 0 0 10px rgba(34, 197, 94, 0.4);
 }
 
 /* Blinking animations */
