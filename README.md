@@ -7,12 +7,20 @@
 
 A dynamic, full-stack web application featuring an immersive, highly interactive **3D rotating globe** that visualizes global threats and geopolitical risks in real time. Built with a sleek, high-density "Hacker" aesthetic—including continuous space backgrounds, dynamic centering, and anonymous encrypted data streams—the dashboard tracks and aggregates data across global events, stock fluctuations, and geographical anomalies.
 
+![Main Dashboard](screenshots/main_dashboard.png)
+
 ## ✨ Features
 
 - **🌐 3D Threat Map Engine**: Automatically updates risk levels for countries based on real-time data feeds, represented through an intuitive color-coded threat map with a dynamically generated infinite starfield background.
 - **🔍 Stream Intercepts**: Watch real-time "Intel Stream" packets flow in through the right-side feed, maintaining an anonymous, secure-channel aesthetic.
+  
+  ![Stream Intercepts](screenshots/stream_intercepts.png)
 - **⏳ Timeline Slider**: A historical playback slider enabling users to view the evolution and escalation of geopolitical events over hours, days, or weeks.
+  
+  ![Timeline Slider](screenshots/timeline_slider.png)
 - **📊 Global Risk Index**: An aggregated DEFCON/Elevated warning system that adapts based on the critical and high-severity data points flowing into the system.
+  
+  ![Global Risk Index](screenshots/global_risk_index.png)
 - **🎯 Intelligent Camera Tracking**: Instantly fly and zoom the 3D globe to any specific country, region, or conflict zone using the integrated search bar, with the globe perfectly centered mathematically in the viewport.
 - **🛡️ "THE WALL" Integrations**: Placeholder architecture for mounting live webcams, Sentinel-2 imagery, and OSINT scrapers directly to the side panel ecosystem.
 
