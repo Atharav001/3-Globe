@@ -87,8 +87,8 @@ setInterval(async () => {
     let newEvent: ThreatEvent | null = null;
 
     try {
-        // In a real scenario, this would scrape a list of news sites
-        // We will scrape CNN or LiveUAMap to get recent geopolitical events
+        // TEMPORARILY DISABLED TO PREVENT CREDIT CONSUMPTION
+        /*
         console.log("Scraping liveuamap via Firecrawl...");
         const result = await firecrawl.scrape('https://liveuamap.com/', {
             formats: ['markdown']
@@ -112,6 +112,9 @@ setInterval(async () => {
             console.log("No valid titles found, falling back to generated.");
             newEvent = generateRandomEvent();
         }
+        */
+        console.log("Scraping API disabled to save credits. Generating synthetic intel package...");
+        newEvent = generateRandomEvent();
     } catch (err) {
         console.error("Scraping error:", err);
         newEvent = generateRandomEvent();
