@@ -18,7 +18,7 @@ const io = new Server(server, {
 });
 
 // Initialize Firecrawl App
-const firecrawl = new Firecrawl({ apiKey: "fc-a319405f58ee41b8a20b7bf0fc3bc66f" });
+const firecrawl = new Firecrawl({ apiKey: "--Inactive--" });
 
 export interface ThreatEvent {
     id: string;
