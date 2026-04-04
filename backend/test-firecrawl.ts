@@ -1,6 +1,6 @@
 import FirecrawlApp from '@mendable/firecrawl-js';
 
-const app = new FirecrawlApp({ apiKey: "fc-a319405f58ee41b8a20b7bf0fc3bc66f" });
+const app = new FirecrawlApp({ apiKey: "--Inavtive--" });
 
 async function run() {
     try {
